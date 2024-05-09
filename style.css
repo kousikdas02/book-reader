@@ -711,7 +711,9 @@ body.hasNoBanner{
 
 
 /* common slider style start */
-
+.common_sec {
+    overflow: hidden;
+}
 .common_slider .slick-track{
     display: flex !important;
 }
