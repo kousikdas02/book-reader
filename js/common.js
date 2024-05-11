@@ -3,7 +3,7 @@ jQuery(document).ready(function($){
 
 
  // Navbar
- $( "<span class='clickD'></span>" ).insertAfter(".navbar-nav li.menu-item-has-children > a");
+ $( "<span class='clickD'><i class='fas fa-chevron-down chatperMenuArrow'></i></span>" ).insertAfter(".navbar-nav li.menu-item-has-children > a");
  $('.navbar-nav li .clickD').click(function(e) {
      e.preventDefault();
      var $this = $(this);
@@ -142,7 +142,7 @@ if($("#scroll").length){
 
 $('.banner_slider').slick({
   dots: false,
-  arrows: true,
+  arrows: false,
   infinite: true,
   slidesToShow: 1,
   slidesToScroll: 1,
@@ -174,7 +174,7 @@ $('.commonSlider1').slick({
   dots: false,
   arrows: true,
   infinite: false,
-  slidesToShow: 6.5,
+  slidesToShow: 7.5,
   slidesToScroll: 1,
   autoplay: false,
   autoplaySpeed: 3000,
@@ -191,16 +191,30 @@ $('.commonSlider1').slick({
       }
     },
     {
+      breakpoint: 1199,
+      settings: {
+        slidesToShow: 4.5,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 991,
+      settings: {
+        slidesToShow: 3.3,
+        slidesToScroll: 1
+      }
+    },
+    {
       breakpoint: 767,
       settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2
+        slidesToShow: 3.3,
+        slidesToScroll: 1
       }
     },
     {
       breakpoint: 480,
       settings: {
-        slidesToShow: 1,
+        slidesToShow: 1.5,
         slidesToScroll: 1
       }
     }
@@ -231,6 +245,14 @@ $(".openReadingMneuBtn").click(function(){
   $(this).parent(".reading_left").toggleClass("reading_menu_open");
   $(this).parent(".reading_left").next(".reading_right").toggleClass("readingRight_smallWidth");
   $(this).toggleClass("openReadingMneuBtn_open")
+});
+$(".readingMenu_mobile").click(function(){
+  $(".reading_left").toggleClass("reading_menu_open");
+  $('body,html' ).toggleClass("open_reading_overlay");
+});
+$(".reading_overlay, .readingMenu_close").click(function(){
+  $(".reading_left").removeClass("reading_menu_open");
+  $('body,html' ).removeClass("open_reading_overlay");
 });
 
 
