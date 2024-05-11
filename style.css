@@ -152,9 +152,9 @@ textarea {
 }
 
 select {
-    border: 1px solid rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(0, 0, 0, 0.4);
     width: 100%;
-    padding: 0 11px;
+    padding: 0 20px;
     background: url(images/sort-down.svg) no-repeat calc(100% - 16px) center transparent;
     background-size: 18px;
     padding-right: 40px;
@@ -164,6 +164,8 @@ select {
     -ms-appearance: none;
     -o-appearance: none;
     appearance: none;
+    border-radius: 5px;
+    height: 50px;
 }
 
 select::-ms-expand {
@@ -466,6 +468,7 @@ transform: translateY(-6px);
     line-height: 1.2;
     position: relative;
     font-weight: normal;
+    font-weight: 500;
 }
 
 .navbar-nav>li>a:after {
@@ -487,7 +490,7 @@ transform: translateY(-6px);
 .navbar-nav>li.current-menu-item>a,
 .navbar-nav>li>a:hover,
 .navbar-nav>li.menu-item-has-children:hover>a {
-    color: #3B61DC;
+    color: #ffcb36;
 }
 
 .navbar-nav>li.current-menu-item>a:after,
@@ -521,8 +524,8 @@ transform: translateY(-6px);
     display: block;
     width: 100%;
     padding: 6px 10px;
-    font-size: 18px;
-    font-weight: 500;
+    font-size: 16px;
+    font-weight: 400;
     line-height: 1.2;
 }
 
@@ -534,8 +537,8 @@ transform: translateY(-6px);
 .sub-menu>li>a:hover,
 .sub-menu>li.menu-item-has-children:hover>a,
 .sub-menu>li.current-menu-item>a {
-    background: #eab71e;
-    color: #fff;
+    color: #ffcb36;
+    
 }
 
 
@@ -664,9 +667,12 @@ body.hasNoBanner{
 .header_right{
     margin-left: 10px;
     color: #ffffff;
+    display: flex;
+    align-items: center;
 }
 .header_right .headerSearchBtn{
     color: #ffffff;
+    margin-right: 20px;
 }
 .header_right .headerSearchBtn:hover{
     color: #ffcb36;
@@ -735,14 +741,14 @@ body.hasNoBanner{
 .navbar-nav>li.current-menu-item>a:after,
 .navbar-nav>li>a:after,
 .navbar-nav>li.menu-item-has-children>a:after{
-    width: 100%;
+    width: 0;
     opacity: 0;
 }
 
 .navbar-nav>li.current-menu-item>a:after,
 .navbar-nav>li>a:hover:after,
 .navbar-nav>li.menu-item-has-children:hover>a:after {
-    width: 100%;
+    width: 0;
     opacity: 1;
 }
 
@@ -764,7 +770,7 @@ body.hasNoBanner{
 .stick:before {
     width: 30px;
     height: 2px;
-    background: #000;
+    background: #ffffff;
     position: absolute;
     left: 0;
     top: auto;
@@ -824,7 +830,7 @@ body.hasNoBanner{
     padding-right: 30px !important;
 }
 .navbar-nav>li>a {
-    padding: 8px 20px;
+    padding: 10px 20px;
     display: inline-block;
     width: 100%;
 }
@@ -840,6 +846,11 @@ body.hasNoBanner{
 
 .navbar-nav>li>a:after{
     bottom: 0;
+}
+.whiteHeader .stick,
+.whiteHeader .stick:after,
+.whiteHeader .stick:before{
+    background: #000000;
 }
 /* navbar end*/
 
@@ -861,6 +872,14 @@ body.hasNoBanner{
     -webkit-transition: transform 0.2s ease-in-out !important;
     transition: transform 0.2s ease-in-out !important;
     z-index: 100;
+}
+.navbar-collapse .stick,
+.navbar-collapse .stick:after,
+.navbar-collapse .stick:before{
+    background: #000000;
+}
+.navbar-collapse .stick.open{
+    background: transparent;
 }
 .navbar-collapse.show,
 .navbar-collapse.collapsing{
@@ -892,6 +911,8 @@ body.open-nav{
     overflow: hidden !important;
 }
 /* push nav end */
+
+
 /* header style end */
 
 
@@ -984,9 +1005,7 @@ body.open-nav{
     width: 100%;
     transition: 0.3s all ease;
 }
-.cmn_slider_link{
-    color: #ffcb36;
-}
+
 .cmn_slider_link:hover i img{
     transform: scale(1.05);
 }
@@ -1198,7 +1217,7 @@ body.open-nav{
     left: -260px;
     bottom: 0;
     height: calc(100vh - 67px);
-    z-index: 10;
+    z-index: 8;
     background: #ffffff;
     box-shadow: 10px 10px 25px 0px rgba(0,0,0,0.1);
     -webkit-transition: all 0.4s ease-in-out;
@@ -1364,7 +1383,18 @@ body.open-nav{
 
 /* reading page style end */
 
-
+/* category page style start */
+.category_sort{
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.category_sort select{
+    margin-right: 20px;
+    width: auto;
+    min-width: 200px;
+}
+/* category page style end */
 
 
 /* ========== responsive css =========== */
@@ -1373,12 +1403,12 @@ body.open-nav{
 
 @media(min-width:1025px) {
     /* navbar*/
-    .navbar-nav .clickD {
+    /* .navbar-nav .clickD {
         display: none;
     }
     .navbar-nav li.menu-item-has-children:hover>.sub-menu {
         display: block;
-    }
+    } */
 }
 
 
