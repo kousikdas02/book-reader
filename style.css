@@ -1541,6 +1541,8 @@ h1, h2, h3, h4, h5, h6{
 .reading_left{
     height: 100vh;
     z-index: 11;
+    bottom: initial;
+    top: 0;
 }
 
 .open_reading_overlay .reading_overlay{
