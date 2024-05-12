@@ -4,7 +4,7 @@ jQuery(document).ready(function($){
 
  // Navbar
  $( "<span class='clickD'><i class='fas fa-chevron-down chatperMenuArrow'></i></span>" ).appendTo(".navbar-nav li.menu-item-has-children > a");
- $('.navbar-nav li > a').click(function(e) {
+ $('.navbar-nav  .menu-item-has-children > a').click(function(e) {
      e.preventDefault();
      var $this = $(this);
      if ($this.next().hasClass('show'))
