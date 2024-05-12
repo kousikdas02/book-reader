@@ -705,7 +705,7 @@ body.hasNoBanner{
     transform: rotate(180deg);
 }
 .sub-menu > li.menu-item-has-children .clickD{
-    top: 3.5px;
+    top: 8.5px;
     right: 5px;
     -webkit-transform: rotate(-90deg);
     transform: rotate(-90deg);
@@ -793,7 +793,7 @@ body.hasNoBanner{
 }
 
 .navbar-nav .clickD {
-    top: 7px;
+    top: 10px;
     right: 10px !important;
     -webkit-transform: rotate(0) !important;
     transform: rotate(0) !important;
@@ -1440,10 +1440,15 @@ body.open_reading_overlay{
     background: transparent;
     display: none;
 }
+
 /* ========== responsive css =========== */
 
 
-
+@media (min-width: 992px) {
+    .col-lg-8cus{
+        width: calc(100% / 8);
+    }
+}
 @media(min-width:1025px) {
     /* navbar*/
     /* .navbar-nav .clickD {
@@ -1554,6 +1559,17 @@ h1, h2, h3, h4, h5, h6{
 .readingMenu_close{
     display: flex;
 }
+.bookDescription_readbtn .cmn_btn{
+    width: 100%;
+   }
+
+   .category_inner .section_title{
+       position: sticky;
+       left: 0;
+       top: 66px;
+       padding: 10px 0;
+       background: #ffffff;
+   }
 }
 
 @media (max-width: 767px) {

@@ -3,21 +3,21 @@ jQuery(document).ready(function($){
 
 
  // Navbar
- $( "<span class='clickD'><i class='fas fa-chevron-down chatperMenuArrow'></i></span>" ).insertAfter(".navbar-nav li.menu-item-has-children > a");
- $('.navbar-nav li .clickD').click(function(e) {
+ $( "<span class='clickD'><i class='fas fa-chevron-down chatperMenuArrow'></i></span>" ).appendTo(".navbar-nav li.menu-item-has-children > a");
+ $('.navbar-nav li > a').click(function(e) {
      e.preventDefault();
      var $this = $(this);
      if ($this.next().hasClass('show'))
         {
             $this.next().removeClass('show');
-            $this.removeClass('toggled');
+            $this.find(".clickD").removeClass('toggled');
         } 
         else 
         {
             $this.parent().parent().find('.sub-menu').removeClass('show');
             $this.parent().parent().find('.toggled').removeClass('toggled');
             $this.next().toggleClass('show');
-            $this.toggleClass('toggled');
+            $this.find(".clickD").toggleClass('toggled');
         }
  });
 
@@ -221,7 +221,56 @@ $('.commonSlider1').slick({
   ]
 });
 
-
+$('.commonSlider_sm').slick({
+  dots: false,
+  arrows: true,
+  infinite: false,
+  slidesToShow: 9.2,
+  slidesToScroll: 1,
+  autoplay: false,
+  autoplaySpeed: 3000,
+  centerMode: false,
+  adaptiveHeight: true,
+  centerPadding: '0',
+  draggable: false,
+  responsive: [
+    {
+      breakpoint: 1366,
+      settings: {
+        slidesToShow: 5.5,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 1199,
+      settings: {
+        slidesToShow: 4.5,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 991,
+      settings: {
+        slidesToShow: 3.3,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 767,
+      settings: {
+        slidesToShow: 3.3,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1.5,
+        slidesToScroll: 1
+      }
+    }
+  ]
+});
 
 
 // search result
