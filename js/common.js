@@ -52,9 +52,6 @@ $(".navbar-toggler").click(function(){
 // Navbar end
 
 
-
-
-
 // to make sticky nav bar
 $(window).scroll(function() {     
     var scroll = $(window).scrollTop();     
@@ -65,23 +62,6 @@ $(window).scroll(function() {
       $(".header").removeClass("fixed"); 
     }
 }) 
-
-
-// smooth scroll to any section
-// if($('a.scroll').length){
-//     $("a.scroll").on('click', function(event) {
-//       if (this.hash !== "") {
-//         event.preventDefault();
-//         var target = this.hash, $target = $(target);
-//         $('html, body').animate({
-//           scrollTop: $target.offset().top - 60
-//         }, 800, function(){
-//           window.location.href.substr(0, window.location.href.indexOf('#'));
-//         });
-//       } 
-//     });
-  
-//   }
 
 
 // back to top
@@ -98,44 +78,6 @@ if($("#scroll").length){
         return false; 
     }); 
 }
-
-
-
-
-// one page scroll menu link
-// $('a[href*="#"]').on('click', function (e) {
-//     e.preventDefault();
-//     $(document).off("scroll");
-//     $('.navbar-nav > li > a').each(function () {
-//         $(this).parent('li').removeClass('current-menu-item');
-//     });
-//     $(this).parent('li').addClass('current-menu-item');
-//     var target = this.hash, $target = $(target);
-//     $('html, body').stop().animate({
-//         'scrollTop': $target.offset().top
-//     }, 500, 'swing', function () {
-//         window.location.href.substr(0, window.location.href.indexOf('#'));
-//         $(document).on("scroll", onScroll);
-//     });
-// });
-//  $(document).on("scroll", onScroll);
-// function onScroll(event){
-//     var scrollPos = $(document).scrollTop() + 100;
-//     $('.navbar-nav > li > a').each(function () {
-//         var currLink = $(this);
-//         var refElement = $(currLink.attr("href"));
-//         if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
-//             $('.navbar-nav > li').removeClass("current-menu-item");
-//             currLink.parent('li').addClass("current-menu-item");
-//         }
-//         else{
-//             currLink.parent('li').removeClass("current-menu-item");
-//         }
-//     });
-// }
-
-
-
 
 
 // slick slider
@@ -221,11 +163,11 @@ $('.commonSlider1').slick({
   ]
 });
 
-$('.commonSlider_sm').slick({
+$('.book_carousel').slick({
   dots: false,
   arrows: true,
   infinite: false,
-  slidesToShow: 9.2,
+  slidesToShow:13.2,
   slidesToScroll: 1,
   autoplay: false,
   autoplaySpeed: 3000,
@@ -235,30 +177,94 @@ $('.commonSlider_sm').slick({
   draggable: false,
   responsive: [
     {
-      breakpoint: 1366,
+      breakpoint: 1537,
       settings: {
-        slidesToShow: 5.5,
+        slidesToShow: 9.2,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 1367,
+      settings: {
+        slidesToShow: 7.5,
         slidesToScroll: 1
       }
     },
     {
       breakpoint: 1199,
       settings: {
-        slidesToShow: 4.5,
+        slidesToShow: 7.2,
         slidesToScroll: 1
       }
     },
     {
       breakpoint: 991,
       settings: {
-        slidesToShow: 3.3,
+        slidesToShow: 5.2,
         slidesToScroll: 1
       }
     },
     {
       breakpoint: 767,
       settings: {
-        slidesToShow: 3.3,
+        slidesToShow: 4.2,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1.5,
+        slidesToScroll: 1
+      }
+    }
+  ]
+});
+$('.category_carousel ').slick({
+  dots: false,
+  arrows: true,
+  infinite: false,
+  slidesToShow: 17.2,
+  slidesToScroll: 1,
+  autoplay: false,
+  autoplaySpeed: 3000,
+  centerMode: false,
+  adaptiveHeight: true,
+  centerPadding: '0',
+  draggable: false,
+  responsive: [
+    {
+      breakpoint: 1537,
+      settings: {
+        slidesToShow: 13.2,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 1367,
+      settings: {
+        slidesToShow: 9.5,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 1199,
+      settings: {
+        slidesToShow: 9.2,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 991,
+      settings: {
+        slidesToShow: 7.2,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 767,
+      settings: {
+        slidesToShow: 5.3,
         slidesToScroll: 1
       }
     },

@@ -486,6 +486,7 @@ transform: translateY(-6px);
 }
 
 .navbar-nav>li.current-menu-item>a,
+.navbar-nav>li.current-menu-parent>a,
 .navbar-nav>li>a:hover,
 .navbar-nav>li.menu-item-has-children:hover>a {
     color: #ffcb36;
@@ -993,11 +994,11 @@ body.open_reading_overlay{
 }
 
 .common_slider .slick-slide {
-    padding: 0 15px;
+    padding: 0 12px;
 }
 
 .common_slider .slick-list {
-    margin: 0 -15px;
+    margin: 0 -12px;
     overflow: visible;
 }
 .cmn_slider_link{
@@ -1020,9 +1021,10 @@ body.open_reading_overlay{
     transform: scale(1.05);
 }
 .cmn_slider_linkTitle{
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 500;
     display: inline-block;
+    line-height: 1;
     
 }
 
@@ -1094,6 +1096,7 @@ body.open_reading_overlay{
 }
 .bookDescription_right .bookDescription_desc{
     margin-bottom: 30px;
+    text-align: justify;
 }
 
 .otherlanguage_row{
@@ -1142,6 +1145,9 @@ body.open_reading_overlay{
 }
 .categoryBtn:hover i img{
     transform: scale(1.05);
+}
+.description_sec{
+    text-align: justify;
 }
 /* book description page end */
 
@@ -1390,8 +1396,12 @@ body.open_reading_overlay{
 .reading_pagination .cmn_btn:last-child{
     margin-right: 0;
 }
-
-
+.reading_content{
+    text-align: justify;
+}
+.reading_content .section_title{
+    text-align: left;
+}
 /* reading page style end */
 
 /* category page style start */
@@ -1439,6 +1449,9 @@ body.open_reading_overlay{
     padding: 0;
     background: transparent;
     display: none;
+}
+.breadcrumb a{
+    font-family: "Noto Serif", serif;
 }
 
 /* ========== responsive css =========== */
